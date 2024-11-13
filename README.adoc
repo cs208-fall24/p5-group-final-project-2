@@ -70,7 +70,7 @@ ONE of the TODO items below and then push the updated README.md to github.
 
 * student1 == TODO
 * student2 == TODO
-* student3 == Pearl Bless Afegenui
+* student3 ==  Pearl Bless Afegenui
 
 === Task 1 - Run the website
 
