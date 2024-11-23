@@ -1,44 +1,58 @@
-body{
-    background-color: blue;
+/* General Styles */
+body {
+    background-color: #e3f2fd; /* Light blue background for a fresh look */
     font-family: Arial, sans-serif; /* Default font for readability */
     color: #333; /* Dark gray text for better contrast */
     margin: 0;
     padding: 0;
 }
 
+/* Header */
 header {
     background-color: #4a90e2; /* Blue header */
     color: white;
     padding: 20px;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em; /* Larger font size for emphasis */
     font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
 }
 
+/* Navigation Bar */
 nav {
     background-color: #333; /* Dark navigation bar */
     color: white;
     display: flex;
     justify-content: space-around;
     padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a shadow for better separation */
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effects */
 }
 
 nav a:hover {
     background-color: #575757;
     border-radius: 5px;
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
+/* Main Content */
 main {
     padding: 20px;
     line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto; /* Center content */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer */
 footer {
     background-color: #4a90e2;
     color: white;
@@ -47,25 +61,33 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+    font-size: 0.9em;
 }
 
+/* Comments Section */
 .comments {
     margin: 20px 0;
     border: 1px solid #ccc;
     padding: 15px;
     border-radius: 5px;
     background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .comments h2 {
     font-size: 1.2em;
     color: #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .comments p {
     margin: 10px 0;
+    font-style: italic; /* Adds a distinct style for comments */
 }
 
+/* Buttons */
 button {
     background-color: #4a90e2;
     color: white;
@@ -73,12 +95,15 @@ button {
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-color: #357ab8;
+    transform: scale(1.05); /* Adds interactivity to buttons */
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -87,5 +112,9 @@ button:hover {
 
     nav a {
         padding: 5px;
+    }
+
+    main {
+        padding: 15px;
     }
 }
