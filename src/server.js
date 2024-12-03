@@ -2,7 +2,7 @@ import express from 'express';
 import sql from 'sqlite3';
 
 const sqlite3 = sql.verbose();
-const db = new sqlite3.Database(':memory:');  // In-memory database
+const db = new sqlite3.Database(':memory:');
 
 const app = express();
 app.use(express.static('public'));
@@ -181,8 +181,7 @@ app.post('/student3/update-comment', (req, res) => {
   });
 });
 
-// ============================
-// Start the server
+
 app.listen(3000, function () {
   console.log('Listening on port 3000...');
 });
