@@ -1,3 +1,86 @@
 body{
-    background-color: hotpink;
+    background-color: rgba(214, 214, 214, 0.986);
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    height: 95vh;
+    width: 95vw;
+    margin: auto;
 }
+
+h1 {
+    font-family: 'Georgia';
+}
+
+h2 {
+    background-color: #000000;
+    color: #BEB7A4;
+    text-align: center; 
+}
+
+h3 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    color: #BEB7A4;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FFFFFC;
+    text-decoration: underline;
+}
+
+button {
+    color: black;
+    background-color: #BEB7A4;
+}
+
+input[type=text] {
+    background-color: #FFFFFC;
+    color: black;
+}
+
+img {
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+
+.comments-list {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.things-list {
+    text-align: center;
+    list-style-type: none;
+}
+
+.comments-page {
+    overflow: visible;
+    text-overflow: unset;
+    white-space: normal;
+    word-wrap: break-word;
+    display: block;
+}
+  
+.hacker {
+    filter: grayscale(40%);
+    display: grid;
+}
+
+.basement {
+    display: grid;
+    filter:grayscale(40%);
+    filter:brightness(70%);
+}
+
+  
+  
