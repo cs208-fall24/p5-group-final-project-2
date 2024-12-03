@@ -1,7 +1,7 @@
 # Retrospective
 
-- name: Jane Doe
-- email: janedoe@u.boisestate.edu
+- name: Pearl Bless Afegenui
+- email: pendypearlbless@u.boisestate.edu
 
 ## Experience
 

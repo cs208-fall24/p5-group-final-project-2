@@ -22,18 +22,29 @@ html
       h2 Things to Do
       p Explore these exciting opportunities:
       ul
+        li Attend workshops and netwroking events 
+        li Explore research opportunities 
+        li Join student organizations 
         li Build robots in our top-notch labs.
         li Collaborate on IoT projects.
         li Participate in national hackathons.
 
+        img(src="C:\Users\Pearl Bless\Documents\Repos\p5-group-final-project-2\image\campus.jpg" alt="University Campus")
+        img(src="image\major.jpg" alt="Cool projects in Major") 
+
     section
       h2 Comments
-      if comments.length > 0
+      if comments && comments.length > 0
         ul
           each comment in comments
             li= comment
       else
-        p No comments available. Be the first to share your thoughts!
+        p No comments available.
+    
+      form(action=" /add-comment" method="POST")
+        label(for="comment") Add a Comment:
+        input(type="text" id="comment" name="comment" required)
+        button(type="submit") Submit
 
     footer
       p &copy; 2024 Super Awesome University
