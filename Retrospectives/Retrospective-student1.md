@@ -21,4 +21,4 @@ NONE
 
 ## Sources used
 
-TODO
+W3 schools: https://www.w3schools.com/css/css3_images.asp
