@@ -1,0 +1,29 @@
+doctype html
+html(lang="en")
+  head
+    title Cybersecurity - Comments
+    link(rel='stylesheet' href='/css/student1.css')
+    script(src='/js/student1.js')
+  body
+    h1 Comments
+    form(action="/student1/add-comment" method="post")
+      input(type="text" name="username" placeholder="Enter your username")
+      input(type="text" name="comment" placeholder="Add your comment...")
+      button(type="submit") Add Comment
+    ul.comments-page
+      each comment in comments
+        li
+          span= comment.username + ": "
+          span(class="comment-text", data-id=comment.id)= comment.comment
+          button(class="edit-button" data-id=comment.id) Edit
+          form(action="/student1/delete-comment" method="post" style="display:inline")
+            input(type="hidden" name="id" value=comment.id)
+            button(type="submit") Delete
+          form(action="/student1/update-comment" method="post" class="edit-form" data-id=comment.id style="display:none")
+            input(type="hidden" name="id" value=comment.id)
+            textarea(name="comment")= comment.comment
+            button(type="submit") Save Changes
+  a(href='/student1') Back to Cybersecurity
+
+
+

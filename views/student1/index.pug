@@ -1,7 +1,66 @@
 doctype html
-link(rel='stylesheet' href='css/student1.css')
+html(lang="en")
+  head
+    title University of Awesome - Cybersecurity
+    link(rel='stylesheet' href='/css/student1.css')
+  body
+    h1 Jeremiah Robinson
+    h2 Cybersecurity
 
-head
-    title Party - student1
-body
-    h1 A complete degree on how to party!
+    img.hacker(src="/img/student1/hacker.jpg" alt="Hacker")
+
+    section
+      h2 Location
+      img.basement(src="/img/student1/basement.jpg" alt="Basement")
+      
+      p.location 
+      |Located in the depths of the NSA Headquarters in Fort Meade, Maryland. Prime underground location to ensure
+      | maximum confidentiality and protection in the event nuclear war occurs.
+
+    section
+      h2 About
+      section
+        h3 The Art of Digital Espionage
+        p 
+            | Our Cybersecurity program is not for the faint of heart. Students learn how to outsmart hackers, 
+            | protect confidential data, and fight off the dark forces of the internet. Armed with firewalls, 
+            | encryption algorithms, and the occasional cup of coffee, our graduates are ready to tackle everything 
+            | from data breaches to nation-state cyberattacks. No cape necessary—just a strong password.
+
+      section
+        h3 Advanced Firewalls and Cryptographic Sorcery
+        p 
+            |Imagine this: You're sitting in a dark room, your only company is a screen of scrolling code, and you're 
+            | defending the digital frontier against an army of cybercriminals. Sounds intense? It is. Our students master 
+            | the fine art of firewalls, VPNs, and cryptography. Encryption? We don't just talk about it—we *live* it.
+      section
+        h3 Hands-on Experience
+        p 
+            | Forget "theoretical knowledge." Our students actually get their hands dirty with real-world hacking tools 
+            | (legally, of course). From ethical hacking to defending against DDoS attacks, students get to dive into 
+            | complex security systems, break into firewalls, and strengthen the web’s most vulnerable entry points, 
+            | all in the name of justice, or maybe just because we like the idea of being digital superheroes.
+
+    section
+      h2 Things To Do
+      ul.things-list
+        li Protect the Wi-Fi from rogue devices trying to hack into your Netflix account
+        li Participate in the semi-annual "Capture the Flag" competition
+        li Help Grandma set her Facebook privacy settings before she tags you in every post
+        li Hack the coffee machine to make sure only decaf is brewed
+        li Create your own unbreakable encryption algorithm... that only you can remember
+
+    section
+        h2 
+            |Comments 
+            a(href='/student1/comments') (View all)
+        if comments && comments.length > 0
+            ul.comments-list
+                each comment in comments
+                    li
+                        span=comment.username + ": " + comment.comment
+        else
+            p No comments available.
+    a(href='/') Back to Home
+    footer
+      p &copy; 2024 Super Awesome University

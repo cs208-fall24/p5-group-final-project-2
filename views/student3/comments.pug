@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    title Computer Systems Engineering - Comments
+    link(rel="stylesheet", href="/css/student3_comments.css")
+  body
+    h1 Comments
+    a(href='/student3') Back to Computer Systems Engineering
+    form(action="/student3/add-comment" method="post")
+      textarea(name="comment" placeholder="Add your comment...").comment
+      input(type="text" name="username" placeholder="Enter your username")
+      button(type="submit") Add Comment
+    ul
+      each comment in comments
+        li
+          span= comment.comment
+          form(action="/student3/delete-comment" method="post" style="display:inline")
+            input(type="hidden" name="id" value=comment.id)
+            button(type="submit") Delete
+
+
+
