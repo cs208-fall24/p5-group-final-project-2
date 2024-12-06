@@ -1,39 +1,15 @@
 doctype html
-html
-  head
-    title Computer Systems Engineering - Super Awesome University
-    link(rel='stylesheet', href='css/style.css')
-  body
-    h1 Super Awesome University
-    h2 Computer Systems Engineering
+link(rel='stylesheet' href='css/style.css')
 
-    section
-      h2 Location
-      p The university is situated in a state-of-the-art campus that fosters innovation and collaboration.
+head
+    title Super awesome university!
+    h1 University of AWESOME
+body
+    img(src="/img/UA.png" alt="Logo")
+    h2 Our majors
+    ul
+        li
+            a(href='/student1') Cybersecurity
+        li
+            a(href='/student3') Computer Systems Engineering
 
-    section
-      h2 About
-      ul
-        li Learn advanced computer hardware and software design.
-        li Engage in real-world problem-solving with cutting-edge technology.
-        li Prepare for an exciting career in technology and engineering fields.
-
-    section
-      h2 Things to Do
-      p Explore these exciting opportunities:
-      ul
-        li Build robots in our top-notch labs.
-        li Collaborate on IoT projects.
-        li Participate in national hackathons.
-
-    section
-      h2 Comments
-      if comments.length > 0
-        ul
-          each comment in comments
-            li= comment
-      else
-        p No comments available. Be the first to share your thoughts!
-
-    footer
-      p &copy; 2024 Super Awesome University

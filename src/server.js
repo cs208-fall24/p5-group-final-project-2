@@ -174,10 +174,20 @@ app.post('/student1/update-comment', (req, res) => {
 
 // Update comment for student3
 app.post('/student3/update-comment', (req, res) => {
-  const { id, updatedComment } = req.body;
-  db.run("UPDATE student3_comments SET comment = ? WHERE id = ?", [updatedComment, id], function(err) {
-    if (err) return res.status(500).send("Error updating comment");
-    res.redirect('/student3/comments');  // Redirect to student3 Comments page
+  const { id, comment } = req.body;
+  
+  console.log("Received data: ", req.body);  // Log the request body
+
+  if (!id || !comment) {
+    return res.status(400).send("Missing comment or ID.");
+  }
+
+  db.run("UPDATE student3_comments SET comment = ? WHERE id = ?", [comment, id], function(err) {
+    if (err) {
+      console.log(err);
+      return res.status(500).send("Error updating comment");
+    }
+    res.redirect('/student3/comments');
   });
 });
 
